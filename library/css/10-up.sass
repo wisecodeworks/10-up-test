@@ -1,0 +1,135 @@
+/*This is the SASS file for the build
+
+/*## Fonts
+// Raleway: https://fonts.google.com/specimen/Raleway
+//
+// ### Sizes
+// - Headings: 36px
+// - Navigation: 18px
+// - Forms: 16px
+// - Content: 14px
+//
+// ## Colors
+// - Orange: #CC4B00 (Links)
+// - Yellow: #FFC700 (Navigation highlight)
+// - Light Blue: #006EF5 (Branding)
+// - Blue: #004EAE (Search and Small screen navigation)
+// - Dark Blue: #013371 (hover/focus in navigation)
+// - Gray: #767676 (Meta info and placeholder text)
+// - Dark Gray: #333333 (Content and in-form search icon)
+// - White: #FFFFFF (Header links / icons and search input)
+//
+// ## Spacing
+// - Gutters are in increments of 5px although most are set to 20px
+
+
+//Colors
+
+$Orange: #CC4B00
+$Yellow: #FFC700
+$LightBlue: #006EF5
+$Blue: #004EAE
+$DarkBlue: #013371
+$Gray: #767676
+$DarkGray: #333333
+$White: #FFFFFF
+
+
+
+//Font Sizes
+$Headings: 36px
+$Navigation: 18px
+$Forms: 16px
+$Content: 14px
+$FontFam: 'Raleway', sans-serif
+
+
+
+//Media Quieries
+$breakpoint-tablet: 768px
+
+
+.body
+ font-family: $FontFam
+ p
+   font-size: $Content
+   color: $DarkGray
+ //Logo area
+.site-branding-wrapper
+  background-color: $LightBlue
+  padding: 5px
+  h1
+    color: $White
+  .burger-icon
+    fill: $White
+.eat-word
+  display: inline
+//Nav Links
+.nav-wrapper
+  background: $Blue
+.flexnav li a
+  background: transparent
+  color: $White
+  border-left: none
+  font-weight: lighter
+  text-decoration: underline
+  font-size: 18px
+.flexnav li
+  background: transparent
+.flexnav li:hover
+  background-color: $DarkBlue
+.flexnav li a:hover
+  color: $Yellow
+.flexnav li:active
+  background-color: $DarkBlue
+.flexnav li a:active
+  color: $Yellow
+.bar1, .bar2, .bar3
+  width: 35px
+  height: 5px
+  background-color: #fff
+  margin: 6px 0
+  transition: 0.4s
+.active .bar1
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px)
+  transform: rotate(-45deg) translate(-9px, 6px)
+.active .bar2
+  opacity: 0
+.active .bar3
+  -webkit-transform: rotate(45deg) translate(-8px, -8px)
+  transform: rotate(45deg) translate(-8px, -8px)
+.menu-button
+  background-color: transparent
+  border-bottom: none
+.navicon
+  display: none
+//blog image & area
+.card-image img
+  max-width: 100%
+  height: auto
+.card-title
+  color: $Orange
+  font-weight: lighter
+  text-decoration: underline
+  font-size: $Headings
+.card-footer
+  color: $Orange
+  text-decoration: underline
+  border: transparent
+  background-color: transparent
+.chevy
+  height: 22px
+.post-box
+  margin-top: 20px
+
+//Gutter areas
+.site-content
+  margin-top: 20px
+
+
+
+@media (max-width: $breakpoint-tablet)
+  .site-branding-wrapper h1
+    text-align: center
+  .eat-word
+    display: none
